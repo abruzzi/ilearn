@@ -1,6 +1,204 @@
 @import "compass/reset";
 @import "compass/css3";
 
+@import "icomoon";
+@import "compass/utilities/general/clearfix";
+
+$heading-bg-color: #333333;
+$heading-fg-color: #EEEEEE;
+$text-color: #333333;
+$main-color: #F68D2E;
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+$body-bg-color: #E9E9E9;
 body {
 	font-size: 62.5%;
+	font-family: "Open Sans", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", "微软雅黑", "Helvetica Neue", Arial, sans-serif;
+  	font-weight: normal;
+  	@include font-smoothing;
+  	background-color: $body-bg-color;
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+}
+
+.highlight {
+	background-color: $main-color;
+}
+
+.header {
+	width: 100%;
+	position: fixed;
+	background-color: $heading-bg-color;
+	border-bottom: 1px solid $main-color;
+	z-index: 2;
+
+	.logo {
+		display: inline-block;
+		padding: .5em 2em;
+		font-size: 2em;
+		font-weight: bold;
+		color: $heading-fg-color;
+	}
+
+	.menu {
+		font-size: 2em;
+		float: right;
+		display: inline-block;
+
+		.menu-item {
+			float: left;
+			text-transform: capitalize;
+			a {
+				font-size: 1em;
+				display: inline-block;
+				padding: .5em 1.5em;
+				color: $heading-fg-color;
+				font-weight: lighter;
+				transition: all .2s ease-in-out;
+				&:hover {
+					background-color: $heading-fg-color;
+					color: $heading-bg-color;
+				}
+			}
+		}
+	}
+}
+
+.hero {
+	padding-top: 2em;
+	width: 100%;
+	min-height: 24em;
+	position: relative;
+	background-color: $heading-bg-color;
+	z-index: 1;
+
+	&:after {
+		position: fixed;
+		background: url('/images/hero-resized.jpg');
+		background-size: cover;
+		position: absolute;
+		content: "";
+		z-index: -1;
+		opacity: .5;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.container {
+	padding-top: 4em;
+	text-align: center;
+}
+
+.cards {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 4em;
+
+	.card {
+		float: left;
+		width: 33.33333%;
+		box-sizing: border-box;
+
+		.detail {
+			@include box-shadow(0 0 2px $body-bg-color);
+			@include border-radius(1% 1% 1% 1%);
+			background-color: white;
+			color: $heading-bg-color;
+			padding: 1em;
+			margin: 1em;
+			box-sizing: border-box;
+
+			overflow: hidden;
+
+			.eye {
+				overflow: hidden;
+				position: relative;
+
+				&:after {
+					content: "";
+					position: absolute;
+					top:0;
+					left:0;
+					bottom: 0;
+					right:0;
+					background-color: $heading-bg-color;
+					opacity: .4;
+				}
+				
+				img {
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+
+			.desc {
+				text-align: left;
+				margin-top: 2em;
+				border-top: 1px solid $body-bg-color;
+				position: relative;
+
+				h2 {
+					font-size: 2em;
+					padding: 1em 0 .5em 0;
+				}
+
+				p {
+					color: #666666;
+					font-size: 1em;
+					padding: .5em 0;
+					line-height: 1.2;
+				}
+				
+				a {
+					display: inline-block;
+					padding-top: 1em;
+				}
+
+				.like {
+					position: absolute;
+					bottom: 0;
+					right:0;
+					font-size: 2em;
+					color: $body-bg-color;
+
+					&:hover {
+						color: $main-color;
+					}
+				}
+			}
+		}
+	}
+
+	@include clearfix;
 }
