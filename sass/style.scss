@@ -4,8 +4,8 @@
 @import "icomoon";
 @import "compass/utilities/general/clearfix";
 
-$heading-bg-color: #333333;
-$heading-fg-color: #EEEEEE;
+$heading-bg-color: #08cadd;
+$heading-fg-color: #8d8e8e;
 $text-color: #333333;
 $main-color: #F68D2E;
 
@@ -49,23 +49,18 @@ a {
 	color: $text-color;
 }
 
-.highlight {
-	background-color: $main-color;
-}
-
 .header {
 	width: 100%;
 	position: fixed;
-	background-color: $heading-bg-color;
-	border-bottom: 1px solid $main-color;
+	background-color: #FFFFFF;
 	z-index: 2;
 
 	.logo {
 		display: inline-block;
 		padding: .5em 2em;
+        width: 5em;
 		font-size: 2em;
 		font-weight: bold;
-		color: $heading-fg-color;
 	}
 
 	.menu {
@@ -75,19 +70,26 @@ a {
 
 		.menu-item {
 			float: left;
+            padding: .5em 1em;
 			text-transform: capitalize;
+            border-right: 1px solid #eaeaea;
+            font-weight: lighter;
+
+            &:last-child {
+              border: none;
+            }
 			a {
 				font-size: 1em;
 				display: inline-block;
 				padding: .5em 1.5em;
 				color: $heading-fg-color;
-				font-weight: lighter;
 				transition: all .2s ease-in-out;
 				&:hover {
-					background-color: $heading-fg-color;
-					color: $heading-bg-color;
+					color: #08cadd;
 				}
 			}
+
+
 		}
 	}
 }
@@ -100,19 +102,9 @@ a {
 	background-color: $heading-bg-color;
 	z-index: 1;
 
-	&:after {
-		position: fixed;
-		background: url('/images/hero-resized.jpg');
-		background-size: cover;
-		position: absolute;
-		content: "";
-		z-index: -1;
-		opacity: .5;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-	}
+    img{
+      margin: 5em auto;
+    }
 }
 
 .container {
@@ -120,22 +112,39 @@ a {
 	text-align: center;
 }
 
+.title-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 7em;
+  border-bottom: 1.5px solid #d7d7d7;
+
+  .title {
+    position: relative;
+    top: -.7em;
+    left: -35em;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #a7a7a7;
+  }
+}
+
+
+
 .cards {
 	width: 80%;
 	margin: 0 auto;
-	padding-top: 4em;
+	padding-top: 2em;
 
 	.card {
 		float: left;
-		width: 33.33333%;
+		width: 25%;
 		box-sizing: border-box;
 
 		.detail {
 			@include box-shadow(0 0 2px $body-bg-color);
 			@include border-radius(1% 1% 1% 1%);
 			background-color: white;
-			color: $heading-bg-color;
-			padding: 1em;
+			padding: 1.5em;
 			margin: 1em;
 			box-sizing: border-box;
 
@@ -152,7 +161,6 @@ a {
 					left:0;
 					bottom: 0;
 					right:0;
-					background-color: $heading-bg-color;
 					opacity: .4;
 				}
 				
@@ -164,8 +172,7 @@ a {
 
 			.desc {
 				text-align: left;
-				margin-top: 2em;
-				border-top: 1px solid $body-bg-color;
+				margin-top: 1em;
 				position: relative;
 
 				h2 {
@@ -173,13 +180,6 @@ a {
 					padding: 1em 0 .5em 0;
 				}
 
-				p {
-					color: #666666;
-					font-size: 1em;
-					padding: .5em 0;
-					line-height: 1.2;
-				}
-				
 				a {
 					display: inline-block;
 					padding-top: 1em;
@@ -188,14 +188,26 @@ a {
 				.like {
 					position: absolute;
 					bottom: 0;
-					right:0;
+					right:3em;
 					font-size: 2em;
-					color: $body-bg-color;
+					color: $heading-fg-color;
 
 					&:hover {
-						color: $main-color;
+						color: #08cadd;
 					}
 				}
+
+                .activities {
+                  position: absolute;
+                  bottom: 0;
+                  right:1em;
+                  font-size: 2em;
+                  color: $heading-fg-color;
+
+                  &:hover {
+                    color: #08cadd;
+                  }
+                }
 			}
 		}
 	}

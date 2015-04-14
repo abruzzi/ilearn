@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../.rvm/gems/ruby-1.9.3-p545/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../usr/local/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -357,97 +357,103 @@ a {
 }
 
 /* line 52, ../sass/style.scss */
-.highlight {
-  background-color: #F68D2E;
-}
-
-/* line 56, ../sass/style.scss */
 .header {
   width: 100%;
   position: fixed;
-  background-color: #333333;
-  border-bottom: 1px solid #F68D2E;
+  background-color: #FFFFFF;
   z-index: 2;
 }
-/* line 63, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .header .logo {
   display: inline-block;
   padding: .5em 2em;
+  width: 5em;
   font-size: 2em;
   font-weight: bold;
-  color: #EEEEEE;
 }
-/* line 71, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .header .menu {
   font-size: 2em;
   float: right;
   display: inline-block;
 }
-/* line 76, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .header .menu .menu-item {
   float: left;
+  padding: .5em 1em;
   text-transform: capitalize;
+  border-right: 1px solid #eaeaea;
+  font-weight: lighter;
 }
-/* line 79, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
+.header .menu .menu-item:last-child {
+  border: none;
+}
+/* line 81, ../sass/style.scss */
 .header .menu .menu-item a {
   font-size: 1em;
   display: inline-block;
   padding: .5em 1.5em;
-  color: #EEEEEE;
-  font-weight: lighter;
+  color: #8d8e8e;
   transition: all .2s ease-in-out;
 }
-/* line 86, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .header .menu .menu-item a:hover {
-  background-color: #EEEEEE;
-  color: #333333;
+  color: #08cadd;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .hero {
   padding-top: 2em;
   width: 100%;
   min-height: 24em;
   position: relative;
-  background-color: #333333;
+  background-color: #08cadd;
   z-index: 1;
 }
-/* line 103, ../sass/style.scss */
-.hero:after {
-  position: fixed;
-  background: url("/images/hero-resized.jpg");
-  background-size: cover;
-  position: absolute;
-  content: "";
-  z-index: -1;
-  opacity: .5;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+/* line 105, ../sass/style.scss */
+.hero img {
+  margin: 5em auto;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .container {
   padding-top: 4em;
   text-align: center;
 }
 
-/* line 123, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
+.title-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 7em;
+  border-bottom: 1.5px solid #d7d7d7;
+}
+/* line 121, ../sass/style.scss */
+.title-container .title {
+  position: relative;
+  top: -.7em;
+  left: -35em;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #a7a7a7;
+}
+
+/* line 133, ../sass/style.scss */
 .cards {
   width: 80%;
   margin: 0 auto;
-  padding-top: 4em;
+  padding-top: 2em;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 128, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .cards .card {
   float: left;
-  width: 33.33333%;
+  width: 25%;
   box-sizing: border-box;
 }
-/* line 133, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .cards .card .detail {
   -moz-box-shadow: 0 0 2px #E9E9E9;
   -webkit-box-shadow: 0 0 2px #E9E9E9;
@@ -456,18 +462,17 @@ a {
   -webkit-border-radius: 1%;
   border-radius: 1% 1% 1% 1%;
   background-color: white;
-  color: #333333;
-  padding: 1em;
+  padding: 1.5em;
   margin: 1em;
   box-sizing: border-box;
   overflow: hidden;
 }
-/* line 144, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .cards .card .detail .eye {
   overflow: hidden;
   position: relative;
 }
-/* line 148, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 .cards .card .detail .eye:after {
   content: "";
   position: absolute;
@@ -475,32 +480,23 @@ a {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #333333;
   opacity: .4;
 }
-/* line 159, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .cards .card .detail .eye img {
   width: 100%;
   margin: 0 auto;
 }
-/* line 165, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 .cards .card .detail .desc {
   text-align: left;
-  margin-top: 2em;
-  border-top: 1px solid #E9E9E9;
+  margin-top: 1em;
   position: relative;
 }
-/* line 171, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .cards .card .detail .desc h2 {
   font-size: 2em;
   padding: 1em 0 .5em 0;
-}
-/* line 176, ../sass/style.scss */
-.cards .card .detail .desc p {
-  color: #666666;
-  font-size: 1em;
-  padding: .5em 0;
-  line-height: 1.2;
 }
 /* line 183, ../sass/style.scss */
 .cards .card .detail .desc a {
@@ -511,11 +507,23 @@ a {
 .cards .card .detail .desc .like {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 3em;
   font-size: 2em;
-  color: #E9E9E9;
+  color: #8d8e8e;
 }
 /* line 195, ../sass/style.scss */
 .cards .card .detail .desc .like:hover {
-  color: #F68D2E;
+  color: #08cadd;
+}
+/* line 200, ../sass/style.scss */
+.cards .card .detail .desc .activities {
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+  font-size: 2em;
+  color: #8d8e8e;
+}
+/* line 207, ../sass/style.scss */
+.cards .card .detail .desc .activities:hover {
+  color: #08cadd;
 }
