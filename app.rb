@@ -3,7 +3,7 @@ require 'rack/contrib'
 
 class ILearnApp < Sinatra::Application
 
-  get '/' do
+  get '/main' do
     content_type :html
     File.open("views/index.html")
   end
