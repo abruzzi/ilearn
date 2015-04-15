@@ -162,13 +162,39 @@ a {
 					bottom: 0;
 					right:0;
 					opacity: .4;
+                    color: #08cadd;
 				}
-				
+
 				img {
 					width: 100%;
 					margin: 0 auto;
 				}
-			}
+
+                .introduction {
+                  position: absolute;
+                  top: 2em;
+                  left: .5em;
+                  opacity: 0;
+                  text-align: left;
+                  line-height: 2.5em;
+
+                  font-size: 1.5em;
+
+                }
+
+                &:hover {
+                  img {
+                    opacity: .1;
+                    transition: all .5s ease-in-out;
+                  }
+
+                  .introduction {
+                    opacity: 1;
+                    transition: all .5s ease-in-out;
+                  }
+                }
+            }
+
 
 			.desc {
 				text-align: left;
@@ -179,36 +205,54 @@ a {
 					font-size: 2em;
 					padding: 1em 0 .5em 0;
 				}
-
-				a {
-					display: inline-block;
-					padding-top: 1em;
-				}
-
-				.like {
-					position: absolute;
-					bottom: 0;
-					right:3em;
-					font-size: 2em;
-					color: $heading-fg-color;
-
-					&:hover {
-						color: #08cadd;
-					}
-				}
-
-                .activities {
-                  position: absolute;
-                  bottom: 0;
-                  right:1em;
-                  font-size: 2em;
-                  color: $heading-fg-color;
-
-                  &:hover {
-                    color: #08cadd;
-                  }
-                }
 			}
+
+            .tool-bar {
+              text-align: left;
+              margin-top: 1em;
+              position: relative;
+
+              .like {
+                position: absolute;
+                bottom: 0;
+                right:4em;
+                font-size: 2em;
+                color: $heading-fg-color;
+
+                &:hover {
+                  color: #08cadd;
+                }
+              }
+              .like-number {
+                position: absolute;
+                bottom: 0;
+                right:3.7em;
+                font-size: 1.5em;
+                font-weight: bolder;
+                color: $heading-fg-color;
+              }
+
+              .activities {
+                position: absolute;
+                bottom: 0;
+                right:1em;
+                font-size: 2em;
+                color: $heading-fg-color;
+
+                &:hover {
+                  color: #08cadd;
+                }
+              }
+
+              .activities-number {
+                position: absolute;
+                bottom: 0;
+                right:0.5em;
+                font-size: 1.5em;
+                font-weight: bolder;
+                color: $heading-fg-color;
+              }
+            }
 		}
 	}
 

@@ -481,49 +481,89 @@ a {
   bottom: 0;
   right: 0;
   opacity: .4;
+  color: #08cadd;
 }
-/* line 167, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .cards .card .detail .eye img {
   width: 100%;
   margin: 0 auto;
 }
 /* line 173, ../sass/style.scss */
+.cards .card .detail .eye .introduction {
+  position: absolute;
+  top: 2em;
+  left: .5em;
+  opacity: 0;
+  text-align: left;
+  line-height: 2.5em;
+  font-size: 1.5em;
+}
+/* line 186, ../sass/style.scss */
+.cards .card .detail .eye:hover img {
+  opacity: .1;
+  transition: all .5s ease-in-out;
+}
+/* line 191, ../sass/style.scss */
+.cards .card .detail .eye:hover .introduction {
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+/* line 199, ../sass/style.scss */
 .cards .card .detail .desc {
   text-align: left;
   margin-top: 1em;
   position: relative;
 }
-/* line 178, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 .cards .card .detail .desc h2 {
   font-size: 2em;
   padding: 1em 0 .5em 0;
 }
-/* line 183, ../sass/style.scss */
-.cards .card .detail .desc a {
-  display: inline-block;
-  padding-top: 1em;
+/* line 210, ../sass/style.scss */
+.cards .card .detail .tool-bar {
+  text-align: left;
+  margin-top: 1em;
+  position: relative;
 }
-/* line 188, ../sass/style.scss */
-.cards .card .detail .desc .like {
+/* line 215, ../sass/style.scss */
+.cards .card .detail .tool-bar .like {
   position: absolute;
   bottom: 0;
-  right: 3em;
+  right: 4em;
   font-size: 2em;
   color: #8d8e8e;
 }
-/* line 195, ../sass/style.scss */
-.cards .card .detail .desc .like:hover {
+/* line 222, ../sass/style.scss */
+.cards .card .detail .tool-bar .like:hover {
   color: #08cadd;
 }
-/* line 200, ../sass/style.scss */
-.cards .card .detail .desc .activities {
+/* line 226, ../sass/style.scss */
+.cards .card .detail .tool-bar .like-number {
+  position: absolute;
+  bottom: 0;
+  right: 3.7em;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #8d8e8e;
+}
+/* line 235, ../sass/style.scss */
+.cards .card .detail .tool-bar .activities {
   position: absolute;
   bottom: 0;
   right: 1em;
   font-size: 2em;
   color: #8d8e8e;
 }
-/* line 207, ../sass/style.scss */
-.cards .card .detail .desc .activities:hover {
+/* line 242, ../sass/style.scss */
+.cards .card .detail .tool-bar .activities:hover {
   color: #08cadd;
+}
+/* line 247, ../sass/style.scss */
+.cards .card .detail .tool-bar .activities-number {
+  position: absolute;
+  bottom: 0;
+  right: 0.5em;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #8d8e8e;
 }
